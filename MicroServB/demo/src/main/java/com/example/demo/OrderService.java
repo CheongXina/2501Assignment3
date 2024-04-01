@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class OrderService {
 
     @Autowired
-    private Repo repository;
+    private OrderRepo repository;
 
     // Use repository to interact with the database
 }

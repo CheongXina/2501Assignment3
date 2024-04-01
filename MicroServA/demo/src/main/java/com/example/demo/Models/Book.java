@@ -1,14 +1,19 @@
 package com.example.demo.Models;
 
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
 
 @Entity
 public class Book {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //let the database generate the ID
     private Long id;
     private String name;
+
+    private double price;
 
     public Long getId() {
         return id;
@@ -24,5 +29,13 @@ public class Book {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

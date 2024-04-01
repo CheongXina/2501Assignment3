@@ -6,5 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookService {
     @Autowired
-    private Repo repository;
+    private BookRepo repository;
 }
